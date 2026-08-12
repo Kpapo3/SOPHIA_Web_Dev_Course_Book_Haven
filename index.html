@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Book Haven | Home</title>
+        <!--Empty css stylesheet until next touchstone-->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body>
+        <!--Header-->
+        <header>
+            <table width="100%" cellpadding="10">
+                <tr valign="middle">
+                    <!--Logo-->
+                    <td width="90">
+                        <a href="index.html">
+                            <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Logo" width="70">
+                        </a>
+                    </td>
+
+                    <!--Page Title + Nav-->
+                    <td>
+                        <h1>Book Haven Bookstore</h1>
+                        <nav aria-label="Main Navigation">
+                            <a href="index.html"><strong><u>Home</u></strong></a> &nbsp;&nbsp;
+                            <a href="about.html">About Us</a> &nbsp;&nbsp;
+                            <a href="gallery.html">Gallery</a> &nbsp;&nbsp;
+                            <a href="contact.html">Contact Us</a>
+                        </nav>
+                    </td>
+                    <!--View Shopping Cart + Search Bar-->
+                    <td align="right">
+                        <button type="button">View Shopping Cart</button>
+                        <br><br>
+                        <label for="search">Search</label>
+                        <input type="search" id="search" name="search" size="30" placeholder="Search title, author, ISBN"/>
+                        <button type="button">Search</button>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <hr/>
+
+        <!--Main content: 3 x 2 -->
+        <main>
+            <!--Row 1-->
+            <table width="100%" cellpadding="10" height="100%">
+                <tr valign="top">
+                    <!--LEFT: Product Card-->
+                    <td width="33%">
+                        <section aria-label="Product Card">
+                            <table width="100%" border="1" cellpadding="10" height="100%">
+                                <tr valign="top">
+                                    <td width="140" align="center">
+                                        <table border="1" cellpadding="20" width="120">
+                                            <tr>
+                                                <td align="center">
+                                                    <img src="images/products/Client3_Book1.png" alt="Brie Mine 4Ever Book Cover" width="90"/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <h3>Brie Mine 4Ever</h3>
+                                        <!--Format Type-->
+                                         <span class="format-tag">Hardcover</span>
+
+                                        <!--Wireframe Search Reqs: Author and ISBN-->
+                                        <p>Author: Jane Doe</p>
+                                        <p>ISBN: 978-3-16-148410-0</p>
+
+                                        <!--Product Rating-->
+                                        <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                        <table width="100%" border="1" cellpadding="10">
+                                            <tr>
+                                                <td>
+                                                    Find out what it takes to make a cheese lovers dream come true.
+                                                </td>
+                                             </tr>
+                                        </table>
+
+                                        <!--Price Label-->
+                                        <p><strong>$10.99</strong></p>
+
+                                        <p align="right">
+                                            <button type="button">Add to Cart</button>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </section>
+                    </td>
+                    
+                    <!--CENTER: Shop by Category-->
+                    <td width="34%" align="center">
+                        <section aria-label="Shop by Category">
+                            <table width="100%" border="1" cellpadding="10" height="100%">
+                                <tr>
+                                    <td align="center">
+                                        <h2>Shop by Category</h2>
+
+                                        <table width="100%" cellpadding="10" height="280">
+                                            <tr>
+                                                <td align="center"><a href="gallery.html">Bestsellers</a></td>
+                                                <td align="center"><a href="gallery.html">Magazines</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><a href="gallery.html">Books</a></td>
+                                                <td align="center"><a href="gallery.html">Bookstore Merchandise</a></td>
+                                            </tr>
+                                        </table>
+
+                                        <p>&nbsp;</p>
+                                        <a href="gallery.html"><button type="button">View All Products</button></a>
+                                        <p>&nbsp;</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </section>
+                    </td>
+
+                    <!--RIGHT: Client Highlights-->
+                    <td width="33%">
+                        <section aria-label="Client Highlights">
+                            <table width="100%" border="1" cellpadding="10" height="100%">
+                                <tr>
+                                    <td colspan="4" align="center">
+                                        <h2>Client Highlights</h2>
+                                    </td>
+                                </tr>
+
+                                <tr valign="top">
+                                    <!--left arrow-->
+                                    <td width="40" align="center">&larr;</td>
+
+                                    <!--text on left-->
+                                    <td>
+                                        <p>
+                                            "Book Haven Boostore is a welcoming atmosphere for avid readers. The community involvement is nice to see and ordering online is a breeze!"
+                                        </p>
+                                        <a href="gallery.html"><button type="button">Shop now</button></a>
+
+                                        <p align="left">&#9679;&#9675;&#9675;</p>
+                                    </td>
+
+                                    <!--Image placeholder box on right-->
+                                    <td width="180" align="center">
+                                        <table width="100%" border="1" cellpadding="35">
+                                            <tr>
+                                                <td align="center">Image</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                    <!--right arrow-->
+                                    <td width="40" align="center">&rarr;</td>
+                                </tr>
+                            </table>
+                        </section>
+                    </td>
+                </tr>
+            </table>
+
+            <table width="100%" cellpadding="10" cellspacing="0" height="100%">
+                <!--Row 2-->
+                <tr valign="top">
+                    <!--LEFT: Shopping Perks-->
+                    <td width="33%">
+                        <section aria-label="Shopping Perks">
+                            <table width="100%" border="1" cellpadding="10" height="100%"">
+                                <tr>
+                                    <td>
+                                        <h2>Shopping Perks</h2>
+                                        <table width="100%" cellpadding="10" height="100%">
+                                            <tr>
+                                                <td>
+                                                    <img src="images/logos/Client3_LogoPalette2_3E5641.png" alt="Shopping Perk 1" width="40">
+                                                    Shopping Perk 1: description here
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/logos/Client3_LogoPalette2_3F5461.png" alt="Shopping Perk 2" width="40">
+                                                    Shopping Perk 2: description here
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/logos/Client3_LogoPalette2_5C2E5C.png" alt="Shopping Perk 3" width="40">
+                                                    Shopping Perk 3: description here
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/logos/Client3_LogoPalette2_742C36.png" alt="Shopping Perk 4" width="40">
+                                                    Shopping Perk 4: description here
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </section>
+                    </td>
+
+                    <!--CENTER: Promo Carousel-->
+                    <td width="34%" align="center">
+                        <section aria-label="Promo Carousel">
+                            <table width="100%" border="1" cellpadding="10" height="100%">
+                                <tr>
+                                    <td colspan="3" align="center">
+                                        <h3>Promotions</h3>
+                                    </td>
+                                </tr>
+
+                                <tr valign="middle">
+                                    <td width="40" align="center">&larr;</td>
+
+                                    <td align="center">
+                                        <table width="100%" cellpadding="5">
+                                            <tr>
+                                                <h3>Ball Magazine</h3>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <img src="images/products/Client3_Magazine1.png" alt="Promo product image" width="180"/>
+                                                </td>
+                                            </tr>
+
+                                            <br/>
+                                            <!--Format Type-->
+                                            <tr>
+                                                <td align="center">
+                                                    <span class="format-tag">Magazine</span>
+                                            </tr>
+                                                <td align="center">
+                                                    <p><strong>$6.00</strong></p>
+                                                    <br>
+                                                    <button type="button">Add to Cart</button>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" align="center">
+                                                    <p>&#9679;&#9675;&#9675;</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                    <td width="40" align="center">&rarr;</td>
+                                </tr>
+                            </table>
+                        </section>
+                    </td>
+
+                    <!--RIGHT: Product Card-->
+                    <td width="33%">
+                        <section aria-label="Product Card 2">
+                            <table width="100%" border="1" cellpadding="10" height="100%">
+                                <tr valign="top">
+                                    <td width="140" align="center">
+                                        <table border="1" cellpadding="20" width="120">
+                                            <tr>
+                                                <td align="center">
+                                                    <img src="images/products/Client3_ToteBag.png" alt="Book Haven Tote Bag" width="90"/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <!--Title-->
+                                        <h3>Book Haven Bag</h3>
+                                        <!--Format Type-->
+                                        <span class="format-tag">Tote bag</span>
+
+                                        <!--Wireframe Search Reqs: Author and ISBN-->
+                                        <p>Author: Book Haven Originals</p>
+                                        <p>ISBN: 978-8-88-899346-7</p>
+
+                                        <!--Product Rating-->
+                                        <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                        <table width="100%" border="1" cellpadding="10">
+                                            <tr>
+                                                <td>
+                                                    A heavy-duty canvas tote bag that says 'ALL I DO IS READ READ READ'.
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--Price Label-->
+                                        <p><strong>$18.00</strong></p>
+                                        <p align="right">
+                                            <button type="button">Add to Cart</button>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </section>
+                    </td>
+                </tr>
+            </table>
+        </main>
+
+        <hr/>
+        <!--Footer-->
+        <footer>
+            <table width="100%" cellpadding="10">
+                <tr valign="top">
+                    <!--Quick Links-->
+                    <td width="33%">
+                        <h2>Quick Links</h2>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="about.html">About Us</a></p>
+                        <p><a href="gallery.html">Gallery</a></p>
+                        <p><a href="contact.html">Contact Us</a></p>
+                    </td>
+                    
+                    <!--Newsletter-->
+                    <td width="34%" align="center">
+                        <table border="1" cellpadding="6" width="60%">
+                            <tr>
+                                <td align="center"><strong>Quote</strong></td>
+                            </tr>
+                        </table>
+                        
+                        <p>Subscribe to our Newsletter!</p>
+                        
+                        <form action="#" method="post">
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required/>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <br/>
+                        
+                        <br/>
+                        <!--Social placeholders + logo-->
+                        <table cellpadding="8">
+                            <tr align="center">
+                                <td><a href="#">Instagram</a></td>
+                                <td><a href="#">Facebook</a></td>
+                                <td>
+                                    <a href="index.html">
+                                        <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Logo" width="30"/>
+                                    </a>
+                                </td>
+                                <td><a href="#">TikTok</a></td>
+                                <td><a href="#">LinkedIn</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                    
+                    <!--Map placeholder-->
+                    <td width="33%" align="center">
+                        <table width="100%" border="1" cellpadding="60">
+                            <tr>
+                                <td align="center">Google Maps Location</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        <p>&copy; 2026 Book Haven Bookstore. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

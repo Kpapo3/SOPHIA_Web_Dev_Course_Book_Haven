@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Book Haven | Gallery</title>
+        <!--Empty css stylesheet until next touchstone-->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body>
+        <!--Header-->
+        <header>
+            <table width="100%" cellpadding="10">
+                <tr valign="middle">
+                    <!--Logo-->
+                    <td width="90">
+                        <a href="index.html">
+                            <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Logo" width="70">
+                        </a>
+                    </td>
+
+                    <!--Page Title + Nav-->
+                    <td>
+                        <h1>Book Haven Bookstore</h1>
+                        <nav aria-label="Main Navigation">
+                            <a href="index.html">Home</a> &nbsp;&nbsp;
+                            <a href="about.html">About Us</a> &nbsp;&nbsp;
+                            <a href="gallery.html"><strong><u>Gallery</u></strong></a> &nbsp;&nbsp;
+                            <a href="contact.html">Contact Us</a>
+                        </nav>
+                    </td>
+                    <!--View Shopping Cart + Search Bar-->
+                    <td align="right">
+                        <button type="button">View Shopping Cart</button>
+                        <br><br>
+                        <label for="search">Search</label>
+                        <input type="search" id="search" name="search" size="30" placeholder="Search title, author, ISBN"/>
+                        <button type="button">Search</button>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <hr/>
+
+        <!--Main Content: -->
+        <main>
+            <table width="100%" cellpadding="10">
+                <!--Page heading-->
+                <tr valign="middle">
+                    <!--left spacer to balance right success box-->
+                    <td width="250">&nbsp;</td>
+
+                    <!--Centered Page Title-->
+                    <td align="center">
+                        <h2>Product Gallery</h2>
+                    </td>
+                    <!--Success Dialog Message on right-->
+                    <td align="right" width="280">
+                        <table border="1" cellpadding="8" width="260">
+                            <tr>
+                                <td align="center">Success: Item added to cart!</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+
+                <!--Products grid-->
+                <tr>
+                    <td colspan="3">
+                        <table width="100%" cellpadding="10" height="100%">
+                            <!--ROW 1-->
+                            <tr valign="top">
+                                <!--Product Card 1-->
+                                <td width="33%">
+                                    <table width="100%" border="1" cellpadding="10" height="100%">
+                                        <tr valign="top">
+                                            <td width="140" align="center">
+                                                <table border="1" cellpadding="20" width="120">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <img src="images/products/Client3_Book1.png" alt="Brie Mine 4Ever Book" width="90">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <!--Right side col: Book details and actions-->
+                                            <td>
+                                                <!--Title-->
+                                                <h3>Brie Mine 4Ever</h3>
+                                                <!--Format Type-->
+                                                <span class="format-tag">Hardcover</span>
+
+                                                <!--Wireframe Search Reqs: Author and ISBN-->
+                                                <p>Author: Jane Doe</p>
+                                                <p>ISBN: 978-3-16-148410-0</p>
+
+                                                <!--Product Rating-->
+                                                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                                <table width="100%" border="1" cellpadding="10">
+                                                    <tr>
+                                                        <td>
+                                                            Find out what it takes to make a cheese lovers dream come true.
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!--Price Label-->
+                                                <p><strong>$10.99</strong></p>
+
+                                                <!--ATC button and alignment-->
+                                                <p align="right">
+                                                    <button type="button">Add to Cart</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <!--Product Card 2-->
+                                <td width="33%">
+                                    <table width="100%" border="1" cellpadding="10" height="100%">
+                                        <tr valign="top">
+                                            <td width="140" align="center">
+                                                <table border="1" cellpadding="20" width="120">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <img src="images/products/Client3_Book2.png" alt="Glory Riders Book" width="90">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <!--Title-->
+                                                <h3>Glory Riders</h3>
+                                                <!--Format Type-->
+                                                <span class="format-tag">Hardcover</span>
+
+                                                <!--Wireframe Search Reqs: Author and ISBN-->
+                                                <p>Author: Alex Chen</p>
+                                                <p>ISBN: 978-1-23-456789-0</p>
+
+                                                <!--Product Rating-->
+                                                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                                <table width="100%" border="1" cellpadding="10">
+                                                    <tr>
+                                                        <td>An epic, high-stakes biker crew adventure, following four friends fighting to save their city.</td>
+                                                    </tr>
+                                                </table>
+                                                <!--Price Label-->
+                                                <p><strong>$12.99</strong></p>
+                                                <!--ATC button and alignment-->
+                                                <p align="right">
+                                                    <button type="button">Add to Cart</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <!--Product Card 3-->
+                                <td width="33%">
+                                    <table width="100%" border="1" cellpadding="10" height="100%">
+                                        <tr valign="top">
+                                            <td width="140" align="center">
+                                                <table border="1" cellpadding="20" width="120">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <img src="images/products/Client3_Book3.png" alt="Sorcerer's Shadowed Chronicles Book" width="90">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <!--Title-->
+                                                <h3>Sorcerer's Shadowed Chronicles</h3>
+                                                <!--Format Type-->
+                                                <span class="format-tag">Hardcover</span>
+
+                                                <!--Wireframe Search Reqs: Author and ISBN-->
+                                                <p>Author: Chris Jenkins</p>
+                                                <p>ISBN: 978-0-98-765432-1</p>
+
+
+                                                <!--Product Rating-->
+                                                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                                <table width="100%" border="1" cellpadding="10">
+                                                    <tr>
+                                                        <td>Deep dive into a dark fantasy mystery novel filled with forbidden spells, magical creatures, ancient stories, and unexpected twists.</td>
+                                                    </tr>
+                                                </table>
+                                                <!--Price Label-->
+                                                <p><strong>$14.99</strong></p>
+
+                                                <!--ATC button and alignment-->
+                                                <p align="right">
+                                                    <button type="button">Add to Cart</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!--ROW 2-->
+                            <tr valign="top">
+                                <!--Product Card 4-->
+                                <td width="33%">
+                                    <table width="100%" border="1" cellpadding="10" height="100%">
+                                        <tr valign="top">
+                                            <td width="140" align="center">
+                                                <table border="1" cellpadding="20" width="120">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <img src="images/products/Client3_Magazine1.png" alt="Ball Magazine" width="90"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <!--Title-->
+                                                <h3>Ball Magazine</h3>
+                                                <p>PROMOTIONAL SALE</p>
+                                                <!--Format Type-->
+                                                <span class="format-tag">Magazine</span>
+
+                                                <!--Wireframe Search Reqs: Author/Publisher and ISBN/ISSN-->
+                                                <p>Author: Sports Media Group</p>
+                                                <p>ISBN: 978-8-88-888765-7</p>
+
+                                                <!--Product Rating-->
+                                                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                                <table width="100%" border="1" cellpadding="10">
+                                                    <tr>
+                                                        <td>
+                                                            The ultimate sports guide to the latest professional pickleball updates, exclusive athlete interviews, and game analysis.
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!--Price Label-->
+                                                <p><strong>$6.00</strong></p>
+                                                <p align="right">
+                                                    <button type="button">Add to Cart</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <!--Product Card 5-->
+                                <td width="33%">
+                                    <table width="100%" border="1" cellpadding="10" height="100%">
+                                        <tr valign="top">
+                                            <td width="140" align="center">
+                                                <table border="1" cellpadding="20" width="120">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <img src="images/products/Client3_Magazine2.png" alt="Travel Magazine" width="90"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <!--Title-->
+                                                <h3>Travel Magazine</h3>
+                                                <!--Format Type-->
+                                                <span class="format-tag">Magazine</span>
+
+                                                <!--Wireframe Search Reqs: Author/Publisher and ISBN/ISSN-->
+                                                <p>Author: TravelIt Press</p>
+                                                <p>ISBN: 978-7-77-777865-6</p>
+
+                                                <!--Product Rating-->
+                                                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                                <table width="100%" border="1" cellpadding="10">
+                                                    <tr>
+                                                        <td>Your passport to the world, featuring budget-friendly tips, stunning photography, hidden destination guides, and more.</td>
+                                                    </tr>
+                                                </table>
+                                                <!--Price Label-->
+                                                <p><strong>$15.99</strong></p>
+                                                <p align="right">
+                                                    <button type="button">Add to Cart</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <!--Product Card 6-->
+                                <td width="33%">
+                                    <table width="100%" border="1" cellpadding="10" height="100%">
+                                        <tr valign="top">
+                                            <td width="140" align="center">
+                                                <table border="1" cellpadding="20" width="120">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <img src="images/products/Client3_Magazine3.png" alt="Eat Magazine" width="90"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <!--Title-->
+                                                <h3>Eat Magazine</h3>
+                                                <!--Format Type-->
+                                                <span class="format-tag">Magazine</span>
+
+                                                <!--Wireframe Search Reqs: Author/Publisher and ISBN/ISSN-->
+                                                <p>Author: Culinary Arts Circle</p>
+                                                <p>ISBN: 978-9-99-985623-9</p>
+
+                                                <!--Product Rating-->
+                                                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                                <table width="100%" border="1" cellpadding="10">
+                                                    <tr>
+                                                        <td>A monthly publication, showcasing global recipes, local restaurant reviews, and expert cooking techniques for foodies.</td>
+                                                    </tr>
+                                                </table>
+                                                <!--Price Label-->
+                                                <p><strong>$10.99</strong></p>
+                                                <p align="right">
+                                                    <button type="button">Add to Cart</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!--ROW 3-->
+                            <tr valign="top">
+                                <!--Product Card 7-->
+                                <td width="33%">
+                                    <table width="100%" border="1" cellpadding="10" height="100%">
+                                        <tr valign="top">
+                                            <td width="140" align="center">
+                                                <table border="1" cellpadding="20" width="120">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <img src="images/products/Client3_Notebook.png" alt="Book Haven Bookstore Notebook" width="90"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <!--Title-->
+                                                <h3>Book Haven Bookstore Notebook</h3>
+                                                <!--Format Type-->
+                                                <span class="format-tag">Notebook</span>
+
+                                                <!--Wireframe Search Reqs: Author and ISBN-->
+                                                <p>Author: Book Haven Originals</p>
+                                                <p>ISBN: 978-8-88-866222-8</p>
+
+                                                <!--Product Rating-->
+                                                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                                <table width="100%" border="1" cellpadding="10">
+                                                    <tr>
+                                                        <td>A premium, journal with thick lined pages, perfect for keeping track of specific pages, reading goals, sketches, notes, and more.</td>
+                                                    </tr>
+                                                </table>
+                                                <!--Price Label-->
+                                                <p><strong>$12.50</strong></p>
+                                                <p align="right">
+                                                    <button type="button">Add to Cart</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <!--Product Card 8-->
+                                <td width="33%">
+                                    <table width="100%" border="1" cellpadding="10" height="100%">
+                                        <tr valign="top">
+                                            <td width="140" align="center">
+                                                <table border="1" cellpadding="20" width="120">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <img src="images/products/Client3_Stickers.png" alt="Book Haven Stickers" width="90"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <!--Title-->
+                                                <h3>Book Haven Bookstore Stickers</h3>
+                                                <!--Format Type-->
+                                                <span class="format-tag">Stickers</span>
+
+                                                <!--Wireframe Search Reqs: Author/Publisher and ISBN/ISSN-->
+                                                <p>Author: Book Haven Originals</p>
+                                                <p>ISBN: 978-8-88-433666-6</p>
+
+                                                <!--Product Rating-->
+                                                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                                <table width="100%" border="1" cellpadding="10">
+                                                    <tr>
+                                                        <td>A fun collection of four high-quality, vinyl stickers for friends, family, or your journaling needs.</td>
+                                                    </tr>
+                                                </table>
+                                                <!--Price Label-->
+                                                <p><strong>$4.99</strong></p>
+                                                <p align="right">
+                                                    <button type="button">Add to Cart</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <!--Product Card 9-->
+                                <td width="33%">
+                                    <table width="100%" border="1" cellpadding="10" height="100%">
+                                        <tr valign="top">
+                                            <td width="140" align="center">
+                                                <table border="1" cellpadding="20" width="120">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <img src="images/products/Client3_ToteBag.png" alt="Book Haven Tote Bag" width="90"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <!--Title-->
+                                                <h3>Book Haven Bag</h3>
+                                                <!--Format Type-->
+                                                <span class="format-tag">Tote bag</span>
+
+                                                <!--Wireframe Search Reqs: Author and ISBN-->
+                                                <p>Author: Book Haven Originals</p>
+                                                <p>ISBN: 978-8-88-899346-7</p>
+
+                                                <!--Product Rating-->
+                                                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                                                <table width="100%" border="1" cellpadding="10">
+                                                    <tr>
+                                                        <td>
+                                                            A heavy-duty canvas tote bag that says 'ALL I DO IS READ READ READ'.
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!--Price Label-->
+                                                <p><strong>$18.00</strong></p>
+                                                <p align="right">
+                                                    <button type="button">Add to Cart</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </main>
+        
+        <hr/>
+        <!--Footer-->
+        <footer>
+            <table width="100%" cellpadding="10">
+                <tr valign="top">
+                    <!--Quick Links-->
+                    <td width="33%">
+                        <h2>Quick Links</h2>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="about.html">About Us</a></p>
+                        <p><a href="gallery.html">Gallery</a></p>
+                        <p><a href="contact.html">Contact Us</a></p>
+                    </td>
+                    
+                    <!--Newsletter-->
+                    <td width="34%" align="center">
+                        <table border="1" cellpadding="6" width="60%">
+                            <tr>
+                                <td align="center"><strong>Quote</strong></td>
+                            </tr>
+                        </table>
+                        
+                        <p>Subscribe to our Newsletter!</p>
+                        
+                        <form action="#" method="post">
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required/>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <br/>
+                        
+                        <br/>
+                        <!--Social placeholders + logo-->
+                        <table cellpadding="8">
+                            <tr align="center">
+                                <td><a href="#">Instagram</a></td>
+                                <td><a href="#">Facebook</a></td>
+                                <td>
+                                    <a href="index.html">
+                                        <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Logo" width="30"/>
+                                    </a>
+                                </td>
+                                <td><a href="#">TikTok</a></td>
+                                <td><a href="#">LinkedIn</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                    
+                    <!--Map placeholder-->
+                    <td width="33%" align="center">
+                        <table width="100%" border="1" cellpadding="60">
+                            <tr>
+                                <td align="center">Google Maps Location</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        <p>&copy; 2026 Book Haven Bookstore. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
