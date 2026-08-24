@@ -44,7 +44,7 @@ html, body {
 }
 
 body{
-    font-family: Arial, "Segoe UI", sans-serif;
+    font-family: Calibri, "Segoe UI", Arial, sans-serif;
     color: var(--ink);
     background: var(--bg);
     line-height: 1.5;
@@ -704,13 +704,13 @@ a:hover{
 
 /* 6) Buttons: primary/secondary feel */
 .btn{
-  background: #fff;
-  border-color: rgba(46,46,78,0.80);
+  background: #FFFEFC;
+  border-color: rgba(46,46,78,0.85);
   color: var(--c1);
 }
 
 .btn:hover{
-  background: rgba(46,46,78,0.08);
+  background: rgba(92, 46, 92, 0.10);
 }
 
 .btn:focus-visible{
@@ -725,7 +725,7 @@ a:hover{
   color: #fff;
 }
 .btn--primary:hover{
-  background: #24243F; /* darker indigo */
+  background: #23233E;
 }
 
 /* 7) Form fields: gentle tint + accessible focus */
@@ -801,6 +801,144 @@ hr{
 }
 
 
+/* ========== Accessibility: focus rings ========== */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+    outline: 3px solid rgba(116,44,54,0.45); /* c5 */
+    outline-offset: 2px;
+}
+
+/* ========== Shopping Cart Modal Screen ========== */
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none; /* shown via .is-open */
+  z-index: 9999;
+}
+
+.modal.is-open{
+  display: grid;
+  place-items: center;
+}
+
+.modal_overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(19, 28, 38, 0.55); /* Bookish black overlay */
+}
+
+.modal_dialog{
+  position: relative;
+  width: min(860px, calc(100% - 28px));
+  background: #FFFEFC;
+  border: 2px solid rgba(19,28,38,0.55);
+  padding: 28px 28px 22px;
+  box-shadow: 0 10px 30px rgba(19,28,38,0.25);
+}
+
+.modal_dialog h2{
+  margin: 0 0 18px 0;
+  color: var(--c1);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 400; /* similar to wireframe look */
+}
+
+/* top-right close */
+.modal_close{
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  padding: 8px 10px;
+  min-width: 0;
+}
+
+/* items boxed list */
+.cart_box{
+  border: 2px solid rgba(19,28,38,0.55);
+  background: #fff;
+  padding: 10px 18px;
+}
+
+.cart_row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 2px solid rgba(19,28,38,0.35);
+  font-size: 1.25rem;
+}
+
+.cart_row:last-child{
+  border-bottom: none;
+}
+
+.cart_price{
+  padding-left: 18px;
+  white-space: nowrap;
+}
+
+/* total line */
+.cart_total{
+  margin: 22px 2px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  font-size: 1.15rem;
+}
+
+.cart_total_price{
+  font-size: 1.8rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* actions */
+.cart_actions{
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.cart_actions .btn{
+  font-size: 1.35rem;
+  justify-self: center;
+  min-width: min(240px, 100%);
+  padding: 12px 24px;
+  margin: 0 8px;
+}
+
+.cart_actions .btn--primary{
+  background: var(--c1);
+  border-color: var(--c1);
+  color: #fff;
+}
+
+.cart_note{
+  margin: 14px 2px 0;
+  text-align: right;
+  font-style: italic;
+  color: rgba(19,28,38,0.85);
+  min-height: 1.4em; /* keeps layout stable even when empty */
+}
+
+/* Mobile: stack buttons like wireframe mobile */
+@media (max-width: 520px){
+  .modal_dialog{ padding: 18px; }
+  .cart_row{ font-size: 1.05rem; }
+  .cart_actions{
+    grid-template-columns: 1fr;
+  }
+  .cart_actions .btn{
+    width: 100%;
+    min-width: 0;
+  }
+  .cart_note{ text-align: left; }
+}
 
 /* ========== Responsive ========== */
 @media (max-width: 950px){
