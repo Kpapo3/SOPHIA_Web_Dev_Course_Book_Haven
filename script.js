@@ -1,4 +1,87 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    /* ========== Helpers ========== */
+    const CART_KEY = "bh_cart";  // sessionStorage key
+    const ORDER_KEY = "bh_custom_orders";  // localStorage key (array)
+
+    function readCart() {
+        try {
+            return JSON.parse(sessionStorage.getItem(CART_KEY)) || [];
+        }
+        catch {
+            return [];
+        }
+    }
+
+    function writeCart(cart) {
+        sessionStorage.setItem(CART_KEY, JSON.stringify(cart));
+    }
+
+    function addItemToCart(item) {
+        const cart = readCart();
+        const existing = cart.find((x) => x.id === item.id);
+
+        if (existing) {
+            existing.qty += 1;
+        }
+        else {
+            cart.push({ ...item, qty: 1 });
+        }
+
+        writeCart(cart);
+    }
+
+    function clearCart() {
+        sessionStorage.removeItem(CART_KEY);
+    }
+
+    function cartTotal(cart) {
+        return cart.reduce((sum, item) => sum + (Number(item.price) * item.qty), 0);
+    }
+
+    function formatMoney(n) {
+        return `$${n.toFixed(2)}`;
+    }
+
+    function renderCartIntoModal() {
+        const cart = readCart();
+
+        /* ==== TEMPORARY TO SHOW CALCULATION ERROR
+        alert('CURRENT DATA IS: ' + JSON.stringify(cart));
+        ================================================== */
+
+        const cartBox = document.querySelector(".cart_box");
+        const totalE1 = document.querySelector(".cart_total_price");
+
+        if (!cartBox || !totalE1) return;
+
+        // Clear current rows
+        cartBox.innerHTML = "";
+
+        if (cart.length === 0) {
+            // EMPTY state
+            const empty = document.createElement("div");
+            empty.className = "cart_row";
+            empty.innerHTML = `<span>Your cart is empty.</span><span class="cart_price">$0.00</span>`;
+            cartBox.appendChild(empty);
+            totalE1.textContent = "$0.00";
+            return;
+        }
+
+        // Render each row
+        cart.forEach((item) => {
+            const row = document.createElement("div");
+            row.className = "cart_row";
+            row.innerHTML = `
+                <span>${item.name}: x${item.qty}</span>
+                <span class="cart_price">${formatMoney(item.price * item.qty)}</span>
+            `;
+            cartBox.appendChild(row);
+        });
+
+        totalE1.textContent = formatMoney(cartTotal(cart));
+    }
+
     /* ========== Shopping Modal ========== */
     const cartModal = document.getElementById('cartModal');
     const openCartBtn = document.getElementById('openCartBtn');
@@ -8,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function openCart(){
         if (!cartModal) return;
+        renderCartIntoModal();  // Reads sessionStorage into modal
         cartModal.classList.add('is-open');
         cartModal.setAttribute('aria-hidden', 'false');
         if (cartNote) cartNote.textContent = "";
@@ -30,17 +114,43 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape' && cartModal?.classList.contains('is-open')) closeCart();
     });
     
-    cartProcessBtn?.addEventListener('click', () => {
+    // Process order, must clear sessionStorage
+    cartProcessBtn?.addEventListener('click', (e) => {
+        e.preventDefault();
+        clearCart();
+        renderCartIntoModal();
         if (cartNote) cartNote.textContent = '"Thank you for your order!"';
         alert('Thank you for your order.');
     });
     
-    cartClearBtn?.addEventListener('click', () => {
-        document.querySelectorAll('.cart_row').forEach((r) => r.remove());
-        const total = document.querySelector('.cart_total_price');
-        if (total) total.textContent = "$0.00";
+    // Clear cart, must clear sessionStorage
+    cartClearBtn?.addEventListener('click', (e) => {
+        e.preventDefault();
+        clearCart();
+        renderCartIntoModal();
         if (cartNote) cartNote.textContent = "";
         alert('Cart cleared.');
+    });
+
+    /* ===== Add to Cart (Gallery/Home) sessionStorage ===== */
+    document.querySelectorAll(".add-to-cart").forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Read data from button (for storage)
+            const id = btn.dataset.id || btn.getAttribute('data-id');
+            const name = btn.dataset.name || btn.getAttribute('data-name') || 'Item';
+            const priceRaw = btn.dataset.price || btn.getAttribute('data-price') || '0';
+            const price = Number(priceRaw);
+
+            if (!id || Number.isNaN(price)) {
+                alert('Item data is missing (data-id / data-price).');
+                return;
+            }
+
+            addItemToCart({ id, name, price });
+            alert('Item added to the cart.');
+        });
     });
 
     // Subscribe alert for all pages
@@ -51,21 +161,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add to Cart alert (Gallery and Home)
-    if (document.body.classList.contains('page-gallery') || document.body.classList.contains('page-home')) {
-        document.querySelectorAll('.add-to-cart').forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('Item added to the cart.');
-            });
-        });
+    /* ===== About Us/Contact Us Forms (for localStorage) ===== */
+    function readOrders() {
+        try {
+            return JSON.parse(localStorage.getItem(ORDER_KEY)) || [];
+        }
+        catch {
+            return [];
+        }
     }
 
-    // Contact form submit alert (About/Contact page)
+    function writeOrders(orders) {
+        localStorage.setItem(ORDER_KEY, JSON.stringify(orders));
+    }
+
     document.querySelectorAll('.contact-form, .contact-mini-form').forEach((form) => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for your message.');
+
+            const data = Object.fromEntries(new FormData(form).entries());
+
+            // Add metadata for tracking
+            const submission = {
+                ...data,
+                submittedAt: new Date().toISOString(),
+                page: document.body.className || 'unknown'
+            };
+
+            const orders = readOrders();
+            orders.push(submission);
+            writeOrders(orders);
+
+            alert(
+                "Thank you for your message!\n\n" + 
+                "Data saved to LocalStorage:\n" + 
+                localStorage.getItem('bh_custom_orders')
+            );
+
+            form.reset();
         });
     });
 });
