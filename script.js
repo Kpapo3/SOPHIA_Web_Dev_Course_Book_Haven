@@ -46,9 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderCartIntoModal() {
         const cart = readCart();
 
-        /* ==== TEMPORARY TO SHOW CALCULATION ERROR
+        /* BEFORE-CLEAR PROOF */
         alert('CURRENT DATA IS: ' + JSON.stringify(cart));
-        ================================================== */
 
         const cartBox = document.querySelector(".cart_box");
         const totalE1 = document.querySelector(".cart_total_price");
@@ -154,8 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Subscribe alert for all pages
-    document.querySelectorAll('.newsletter-form').forEach((btn) => {
-        btn.addEventListener('submit', (e) => {
+    document.querySelectorAll('.newsletter-form').forEach((form) => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();  // See alert consistently, stops reload
             alert('Thank you for subscribing.');
         });
