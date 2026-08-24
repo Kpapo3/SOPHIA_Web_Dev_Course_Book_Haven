@@ -183,5 +183,46 @@
             
             <p class="footer-copy">&copy; 2026 Book Haven Bookstore. All rights reserved.</p>
         </footer>
+
+        <!-- Shopping Cart Modal -->
+        <div class="modal" id="cartModal" aria-hidden="true">
+            <div class="modal_overlay" data-close="true"></div>
+
+            <section class="modal_dialog" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+                <button class="modal_close btn btn--ghost" type="button" aria-label="Close cart" data-close="true">X</button>
+                
+                <h2 id="cartTitle">Your Shopping Cart</h2>
+                <div class="cart_box" role="region" aria-label="Cart items">
+                    <div class="cart_row">
+                        <span>Book 1: x1</span>
+                        <span class="cart_price">$14.99</span>
+                    </div>
+                    <div class="cart_row">
+                        <span>Book 2: x2</span>
+                        <span class="cart_price">$29.98</span>
+                    </div>
+                    <div class="cart_row">
+                        <span>Magazine: x1</span>
+                        <span class="cart_price">$5.99</span>
+                    </div>
+                </div>
+                
+                <div class="cart_total">
+                    <span>Total Balance Due:</span>
+                    <span class="cart_total_price">$50.96</span>
+                </div>
+                
+                <div class="cart_actions">
+                    <button class="btn" type="button" id="cartClearBtn">Clear</button>
+                    <button class="btn" type="button" data-close="true">Back</button>
+                    <button class="btn btn--primary" type="button" id="cartProcessBtn">Process</button>
+                </div>
+                
+                <p class="cart_note" id="cartNote" aria-live="polite"></p>
+
+                <!-- ADD JS script file -->
+                <script src="script.js" defer></script>
+            </section>
+        </div>
     </body>
 </html>
