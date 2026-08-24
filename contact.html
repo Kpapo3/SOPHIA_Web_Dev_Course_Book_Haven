@@ -4,261 +4,181 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Book Haven | Contact Us</title>
-        <!--Empty css stylesheet until next touchstone-->
         <link rel="stylesheet" href="style.css"/>
     </head>
 
     <body>
         <!--Header-->
-        <header>
-            <table width="100%" cellpadding="10">
-                <tr valign="middle">
-                    <!--Logo-->
-                    <td width="90">
-                        <a href="index.html">
-                            <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Logo" width="70">
-                        </a>
-                    </td>
+        <header class="site-header">
+            <div class="container header-bar">
+                <a class="header-logo" href="index.html">
+                    <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Bookstore Logo" width="70">
+                </a>
 
-                    <!--Page Title + Nav-->
-                    <td>
-                        <h1>Book Haven Bookstore</h1>
-                        <nav aria-label="Main Navigation">
-                            <a href="index.html">Home</a> &nbsp;&nbsp;
-                            <a href="about.html">About Us</a> &nbsp;&nbsp;
-                            <a href="gallery.html">Gallery</a> &nbsp;&nbsp;
-                            <a href="contact.html"><strong><u>Contact Us</u></strong></a>
-                        </nav>
-                    </td>
-                    <!--View Shopping Cart + Search Bar-->
-                    <td align="right">
-                        <button type="button">View Shopping Cart</button>
-                        <br><br>
+                <div class="header-main">
+                    <h1 class="site-title">Book Haven Bookstore</h1>
+
+                    <nav class="site-nav" aria-label="Main Navigation">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a class="is-active" href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+
+                <div class="header-actions">
+                    <button class="btn btn--ghost" type="button" id="openCartBtn">View Shopping Cart</button>
+
+                    <form class="search-row" action="#" method="get" role="search">
                         <label for="search">Search</label>
-                        <input type="search" id="search" name="search" size="30" placeholder="Search title, author, ISBN"/>
-                        <button type="button">Search</button>
-                    </td>
-                </tr>
-            </table>
+                        <input type="search" id="search" name="search" placeholder="Search title, author, ISBN">
+                        <button class="btn btn--ghost" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
         </header>
+        
         <hr/>
 
         <!--Main Content: -->
         <main>
-            <table width="100%" cellpadding="10">
-                <colgroup>
-                    <col width="33%">
-                    <col width="34%">
-                    <col width="33%">
-                </colgroup>
-                
-                <!--LEFT COLUMN: Community Involvement + Testimonial 1-->
-                <tr valign="top">
-                    <td>
-                        <table width="100%" border="1" cellpadding="10">
-                            <tr>
-                                <td>
-                                    <h2>Community Involvements</h2>
-                                    <p>
-                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex ea commodo consequat."
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table width="100%" border="1" cellpadding="35">
-                                            <tr>
-                                                <td align="center">Image</td>
-                                            </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
+            <div class="container contact">
+                <section class="contact-grid" aria-label="Contact page columns">
+                    <!-- LEFT COL: Community Involvement + Testimonial -->
+                    <div class="contact-col" aria-label="Left column">
+                        <article class="card">
+                            <div class="card_body">
+                                <h2>Community Involvements</h2>
+                                <p>
+                                    We love to partner with local schools to host monthly reading challenges, charity book drives, and a variety of workshops for all ages in the community.
+                                </p>
 
-                        <table width="100%" border="1" cellpadding="10">
-                            <tr>
-                                <td>
-                                    <h2>Testimonials</h2>
-                                    <p>
-                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex ea commodo consequat."
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
+                                <img src="https://images.unsplash.com/photo-1782150924576-578cbd74cfdf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cozy bookstore with wooden bookshelves" class="community-img">
+                            </div>
+                        </article>
 
-                    <!--CENTER COLUMN: Contact Form-->
-                    <td>
-                        <table width="100%" border="1" cellpadding="10">
-                            <tr>
-                                <td align="center">
-                                    <h2>Contact Form</h2>
-                                </td>
-                            </tr>
+                        <div class="col-gap" aria-hidden="true"></div>
 
-                            <tr>
-                                <td>
-                                    <form action="#" method="post">
-                                        <p>
-                                            <label for="contactName">Name</label><br/>
-                                            <input type="text" id="contactName" name="contactName" size="40" required>
-                                        </p>
+                        <article class="card">
+                            <div class="card_body">
+                                <h2>Testimonials</h2>
+                                <p>
+                                    "Book Haven has completely transformed our family outing into a time that was truly unforgettable! The curated kids' area and cozy atmosphere make it our favorite spot in town." -Sarah B., Local Parent
+                                </p>
+                            </div>
+                        </article>
+                    </div>
 
-                                        <p>
-                                            <label for="contactPhone">Phone Number</label><br/>
-                                            <input type="text" id="contactPhone" name="contactPhone" size="40">
-                                        </p>
+                    <!-- CENTER COL: Contact Form -->
+                    <div class="contact-col" aria-label="Center column">
+                        <article class="card">
+                            <div class="card_body">
+                                <h2 class="center">Contact Form</h2>
 
-                                        <p>
-                                            <label for="contactEmail">Email</label><br/>
-                                            <input type="text" id="contactEmail" name="contactEmail" size="40" required>
-                                        </p>
+                                <form action="#" method="post" class="contact-form">
+                                    <div class="field">
+                                        <label for="contactName">Name</label>
+                                        <input type="text" id="contactName" name="contactName" required>
+                                    </div>
 
-                                        <p>
-                                            <label for="contactMessage">Message</label><br/>
-                                            <textarea id="contactMessage" name="contactMessage" rows="9" cols="42" required></textarea>
+                                    <div class="field">
+                                        <label for="contactPhone">Phone Number</label>
+                                        <input type="tel" id="contactPhone" name="contactPhone">
+                                    </div>
 
-                                        </p>
+                                    <div class="field">
+                                        <label for="contactEmail">Email</label>
+                                        <input type="email" id="contactEmail" name="contactEmail" required>
+                                    </div>
 
-                                        <p>We appreciate your feedback!</p>
+                                    <div class="field">
+                                        <label for="contactMessage">Message</label>
+                                        <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                                    </div>
+                                    
+                                    <p>We appreciate your feedback!</p>
 
-                                        <a href="index.html">
-                                            <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Logo" width="70">
-                                        </a>
-                                        
-                                        <p align="center">
-                                            <button type="clear">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <button type="submit">Submit</button>
-                                        </p>
-                                    </form>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
+                                    <div class="form-actions center">
+                                        <button class="btn btn--ghost" type="reset">Clear</button>
+                                        <button class="btn btn--primary" type="submit">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
 
-                    <!--RIGHT COLUMN: Testimonial 2 + Events-->
-                    <td>
-                        <table width="100%" border="1" cellpadding="10">
-                            <tr>
-                                <td>
-                                    <h2>Testimonials</h2>
-                                    <p>
-                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex ea commodo consequat."
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                        <br/>
+                    <!-- RIGHT COL: Testimonial 2 + Events -->
+                    <div class="contact-col" aria-label="Right column">
+                        <article class="card">
+                            <div class="card_body">
+                                <h2>Testimonials</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </article>
 
-                        <table width="100%" border="1" cellpadding="10">    
-                            <tr>
-                                <td>
-                                    <h2>Events &amp; Collaborations</h2>
+                        <div class="col-gap" aria-hidden="true"></div>
 
-                                    <table width="100%" cellpadding="4">
-                                        <tr>
-                                            <td>July 5th: Summer Book Reading</td>
-                                        </tr>
-                                        <tr>
-                                            <td><hr/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>July 12th: Local Author Signing</td>
-                                        </tr>
-                                        <tr>
-                                            <td><hr></td>
-                                        </tr>
-                                        <tr>
-                                            <td>July 19th: Summer Storytime Collab Signing</td>
-                                        </tr>
-                                        <tr>
-                                            <td><hr></td>
-                                        </tr>
-                                        <tr>
-                                            <td>July 26th: Charity Book Drive Kickoff</td>
-                                        </tr>
-                                        <tr>
-                                            <td><hr></td>
-                                        </tr>
-                                        <tr>
-                                            <td>July 30th: Community Open Book Reading</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
+                        <article class="card">
+                            <div class="card_body">
+                                <h2>Events &amp; Collaborations</h2>
 
-            </table>
+                                <ul class="events" aria-label="Events list">
+                                    <li>July 5th: Summer Book Reading</li>
+                                    <li>July 12th: Local Author Signing</li>
+                                    <li>July 19th: Summer Storytime Collab Signing</li>
+                                    <li>July 26th: Charity Book Drive Kickoff</li>
+                                    <li>July 30th: Community Open Book Reading</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </main>
         
         <hr/>
-        <!--Footer-->
-        <footer>
-            <table width="100%" cellpadding="10">
-                <tr valign="top">
-                    <!--Quick Links-->
-                    <td width="33%">
-                        <h2>Quick Links</h2>
-                        <p><a href="index.html">Home</a></p>
-                        <p><a href="about.html">About Us</a></p>
-                        <p><a href="gallery.html">Gallery</a></p>
-                        <p><a href="contact.html">Contact Us</a></p>
-                    </td>
-                    
-                    <!--Newsletter-->
-                    <td width="34%" align="center">
-                        <table border="1" cellpadding="6" width="60%">
-                            <tr>
-                                <td align="center"><strong>Quote</strong></td>
-                            </tr>
-                        </table>
-                        
-                        <p>Subscribe to our Newsletter!</p>
-                        
-                        <form action="#" method="post">
-                            <label for="email">Email</label><br>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required/>
-                            <button type="submit">Subscribe</button>
-                        </form>
-                        <br/>
-                        
-                        <br/>
-                        <!--Social placeholders + logo-->
-                        <table cellpadding="8">
-                            <tr align="center">
-                                <td><a href="#">Instagram</a></td>
-                                <td><a href="#">Facebook</a></td>
-                                <td>
-                                    <a href="index.html">
-                                        <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Logo" width="30"/>
-                                    </a>
-                                </td>
-                                <td><a href="#">TikTok</a></td>
-                                <td><a href="#">LinkedIn</a></td>
-                            </tr>
-                        </table>
-                    </td>
-                    
-                    <!--Map placeholder-->
-                    <td width="33%" align="center">
-                        <table width="100%" border="1" cellpadding="60">
-                            <tr>
-                                <td align="center">Google Maps Location</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
 
-        <p>&copy; 2026 Book Haven Bookstore. All rights reserved.</p>
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <section>
+                    <h2>Quick Links</h2>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="gallery.html">Gallery</a></p>
+                    <p><a href="contact.html">Contact Us</a></p>
+                </section>
+                
+                <section class="footer-center">
+                    <div class="quote-box"><strong>Stay curious, stay bookish.</strong></div>
+                    <p>Subscribe to our Newsletter!</p>
+                    
+                    <form class="newsletter-form" action="#" method="post">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <button class="btn btn--primary" type="submit">Subscribe</button>
+                    </form>
+                    
+                    <nav class="social" aria-label="Social Links">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="index.html">
+                            <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Logo" width="30">
+                        </a>
+                        <a href="#">TikTok</a>
+                        <a href="#">LinkedIn</a>
+                    </nav>
+                </section>
+                
+                <section>
+                    <img src="https://images.unsplash.com/photo-1584972191378-d70853fc47fc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Map location" class="footer-map-img">
+                </section>
+            </div>
+            
+            <p class="footer-copy">&copy; 2026 Book Haven Bookstore. All rights reserved.</p>
         </footer>
     </body>
 </html>
