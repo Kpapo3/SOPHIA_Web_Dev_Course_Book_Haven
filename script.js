@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Subscribe alert for all pages
-    document.querySelectorAll('.newsletter-form-button, #subscribeBtn').forEach((btn) => {
-        btn.addEventListener('click', (e) => {
+    document.querySelectorAll('.newsletter-form').forEach((btn) => {
+        btn.addEventListener('submit', (e) => {
             e.preventDefault();  // See alert consistently, stops reload
             alert('Thank you for subscribing.');
         });
@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Contact form submit alert (About/Contact page)
-    const contactSubmitBtn = document.querySelector(
-        "#contactSubmitBtn, .contact-form button[type='submit']"
-    );
-    contactSubmitBtn?.addEventListener('click', () => {
-        alert('Thank you for your message.');
-    })
+    document.querySelectorAll('.contact-form, .contact-mini-form').forEach((form) => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message.');
+        });
+    });
 });
