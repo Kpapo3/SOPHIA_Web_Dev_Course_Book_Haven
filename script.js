@@ -46,8 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderCartIntoModal() {
         const cart = readCart();
 
-        /* BEFORE-CLEAR PROOF */
+        /* ===== BEFORE-CLEAR PROOF
         alert('CURRENT DATA IS: ' + JSON.stringify(cart));
+        ================================================== */
 
         const cartBox = document.querySelector(".cart_box");
         const totalE1 = document.querySelector(".cart_total_price");
@@ -191,13 +192,33 @@ document.addEventListener('DOMContentLoaded', () => {
             orders.push(submission);
             writeOrders(orders);
 
-            alert(
-                "Thank you for your message!\n\n" + 
-                "Data saved to LocalStorage:\n" + 
-                localStorage.getItem('bh_custom_orders')
-            );
+            alert("Thank you for your message!");
 
             form.reset();
         });
     });
+
+    /* ======= Hamburger Menu toggle (vertical dropdown menu) ======= */
+    const navToggleBtn = document.getElementById('navToggleBtn');
+    const primaryNav = document.getElementById('primaryNav');
+
+    if (navToggleBtn && primaryNav) {
+        navToggleBtn.addEventListener('click', () => {
+            const isOpen = primaryNav.classList.toggle('is-open');
+            navToggleBtn.setAttribute('aria-expanded', String(isOpen));
+            navToggleBtn.setAttribute('aria-label', isOpen ? "Close menu" : "Open menu");
+        });
+    }
+
+    /* Close menu after clicking nav link on mobile */
+    primaryNav?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            if (primaryNav.classList.contains('is-open')) {
+                primaryNav.classList.remove('is-open');
+                navToggleBtn?.setAttribute('aria-expanded', 'false');
+                navToggleBtn?.setAttribute('aria-label', 'Open menu');
+            }
+        });
+    });
+
 });

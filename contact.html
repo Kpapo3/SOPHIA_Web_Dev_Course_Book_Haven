@@ -17,24 +17,31 @@
 
                 <div class="header-main">
                     <h1 class="site-title">Book Haven Bookstore</h1>
-
-                    <nav class="site-nav" aria-label="Main Navigation">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About Us</a>
-                        <a href="gallery.html">Gallery</a>
-                        <a class="is-active" href="contact.html">Contact Us</a>
-                    </nav>
                 </div>
 
                 <div class="header-actions">
                     <button class="btn btn--ghost" type="button" id="openCartBtn">View Shopping Cart</button>
-
-                    <form class="search-row" action="#" method="get" role="search">
-                        <label for="search">Search</label>
-                        <input type="search" id="search" name="search" placeholder="Search title, author, ISBN">
-                        <button class="btn btn--ghost" type="submit">Search</button>
-                    </form>
+                    
+                    <button class="btn btn--ghost nav-toggle"
+                        type="button"
+                        id="navToggleBtn"
+                        aria-controls="primaryNav"
+                        aria-expanded="false"
+                        aria-label="Open menu">☰</button>
                 </div>
+
+                <form class="search-row" action="#" method="get" role="search">
+                    <label for="search">Search</label>
+                    <input type="search" id="search" name="search" placeholder="Search title, author, ISBN">
+                    <button class="btn btn--ghost" type="submit">Search</button>
+                </form>
+
+                <nav class="site-nav" id="primaryNav" aria-label="Main Navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a class="is-active" href="contact.html">Contact Us</a>
+                </nav>
             </div>
         </header>
         
@@ -167,7 +174,7 @@
                     <nav class="social" aria-label="Social Links">
                         <a href="#">Instagram</a>
                         <a href="#">Facebook</a>
-                        <a href="index.html">
+                        <a href="index.html" class="social-logo-link">
                             <img src="images/logos/Client3_LogoPalette2_2E2E4E.png" alt="Book Haven Logo" width="30">
                         </a>
                         <a href="#">TikTok</a>
@@ -218,10 +225,10 @@
                 </div>
                 
                 <p class="cart_note" id="cartNote" aria-live="polite"></p>
-
-                <!-- ADD JS script file -->
-                <script src="script.js" defer></script>
             </section>
         </div>
+
+        <!-- ADD JS script file -->
+        <script src="script.js" defer></script>
     </body>
 </html>
