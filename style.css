@@ -164,7 +164,7 @@ p{ margin: 8px 0; }
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-items: flex-end;
+    justify-self: flex-end;
 }
 
 /* Hamburger button (hidden on desktop) */
@@ -178,6 +178,14 @@ p{ margin: 8px 0; }
 .search-row{
     grid-area: search;
     justify-self: end;
+    width: 320px;
+    display: flex;
+    gap: 8px;
+}
+
+.search-row input[type="search"]{
+    flex-grow: 1;
+    width: 100%;
 }
 
 /* ========== Main spacing ========== */
